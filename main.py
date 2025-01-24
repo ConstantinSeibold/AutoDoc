@@ -34,21 +34,10 @@ def main():
     if is_git_repo(path):
         change_to_git_repo(path)
         files = get_files()
-        
-        # Linting: Apply proper linting to the code, ensuring it adheres to best practices and follows the specific language's conventions. Focus on:
-        # Proper indentation and formatting.
-        # Consistent use of variable names and avoiding shadowing.
-        # Appropriate spacing around operators and control structures.
-        # Removal of redundant code or unnecessary comments.
-        # Optimal use of language-specific features.
-        # Elimination of unused variables, functions, or imports.
-        
-        process_files(files, tasks, model_name)
-        
-        # Stage all changed files
         stage_all_changed_files()
-        
-        # Commit changes
+        commit_changes(user_message)
+        process_files(files, tasks, model_name)
+        stage_all_changed_files()
         commit_changes(user_message + "(automatically documented)")
     else:
         print(f"{path} is not a git directory.")
