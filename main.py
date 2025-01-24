@@ -16,6 +16,7 @@ def main():
     parser.add_argument('--message', type=str, required=False, help="The message to send to the AI model.")
     parser.add_argument('--tasks', type=str, nargs='+', choices=['all','comments', 'docstring', 'linting', 'typehinting'],
                         help="Select one or more tasks to perform: comments, docstring, linting.")
+    parser.add_argument('--no_commit', action='store_true')
 
     # Parse arguments
     args = parser.parse_args()
@@ -25,6 +26,7 @@ def main():
     path = args.path
     user_message = args.message
     tasks = args.tasks
+    commit = not args.no_commit
     
     # Display selected tasks
     if tasks:
@@ -33,11 +35,13 @@ def main():
     if is_git_repo(path):
         change_to_git_repo(path)
         files = get_files()
-        stage_all_changed_files()
-        commit_changes(user_message)
+        if commit:
+            stage_all_changed_files()
+            commit_changes(user_message)
         process_files(files, tasks, model_name)
-        stage_all_changed_files()
-        commit_changes(user_message + f"(automatically for {tasks})")
+        if commit:
+            stage_all_changed_files()
+            commit_changes(user_message + f"(automatically for {tasks})")
     else:
         print(f"{path} is not a git directory.")
 
