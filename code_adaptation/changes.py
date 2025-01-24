@@ -3,7 +3,7 @@ from ollama import ChatResponse
 from .extract_document import extract_text
 from tqdm import tqdm
 import os
-
+ 
 prompts = {
     "all": open("./prompt/all.txt").read(),
     "comments": open("./prompt/comments.txt").read(),

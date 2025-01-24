@@ -1,18 +1,16 @@
 import subprocess
 import os
 
-def change_to_git_repo(directory):
-    # Check if the directory is a Git repository
+def change_to_git_repo(directory): 
     if os.path.isdir(os.path.join(directory, '.git')):
         try:
-            # Change the working directory to the given Git repository path
             os.chdir(directory)
             print(f"Successfully changed to the Git repository at {directory}")
         except FileNotFoundError:
             print(f"Directory not found: {directory}")
     else:
         print(f"{directory} is not a Git repository.")
-        
+
 def is_git_repo(directory):
     return os.path.isdir(os.path.join(directory, '.git'))
 
@@ -82,7 +80,6 @@ def stage_all_changed_files():
     Stages all changed files (including modified, added, and deleted files) for commit.
     """
     try:
-        # Add all changed files to the staging area
         subprocess.run(['git', 'add', '--all'], check=True)
         print("All changed files have been staged.")
     except subprocess.CalledProcessError as e:
@@ -96,12 +93,11 @@ def commit_changes(commit_message):
         commit_message (str): The commit message to use.
     """
     try:
-        # Commit the staged changes with the given commit message
         subprocess.run(['git', 'commit', '-m', commit_message], check=True)
         print(f"Changes have been committed with message: '{commit_message}'")
     except subprocess.CalledProcessError as e:
         print(f"Error committing changes: {e}")
-        
+
 # Example usage
 if __name__ == "__main__":
     changed_files = get_changed_files()
