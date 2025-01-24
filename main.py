@@ -41,6 +41,6 @@ def main():
         commit_changes(user_message + "(automatically documented)")
     else:
         print(f"{path} is not a git directory.")
-        
+
 if __name__ == "__main__":
     main()
