@@ -1,8 +1,7 @@
-# Import necessary libraries
 import argparse, os  # For command line argument parsing
+from typing import List, Optional
 from code_adaptation.changes import process_files  # For modifying code
 from utils.git import get_files, is_git_repo, change_to_git_repo, stage_all_changed_files, commit_changes
-
 
 def main():
     """
@@ -38,7 +37,7 @@ def main():
         commit_changes(user_message)
         process_files(files, tasks, model_name)
         stage_all_changed_files()
-        commit_changes(user_message + "(automatically documented)")
+        commit_changes(user_message + f"(automatically for {tasks})")
     else:
         print(f"{path} is not a git directory.")
 
