@@ -1,0 +1,36 @@
+Your task is to perform multiple tasks on the provided code, ensuring the following:
+
+    Linting: Apply proper linting to the code, ensuring it adheres to best practices and follows the specific language's conventions. Focus on:
+        Proper indentation and formatting.
+        Consistent use of variable names and avoiding shadowing.
+        Appropriate spacing around operators and control structures.
+        Removal of redundant code or unnecessary comments.
+        Optimal use of language-specific features.
+        Elimination of unused variables, functions, or imports.
+
+    Do not change the functionality or behavior of the code.
+
+    Docstrings: Add clear and concise docstrings to all functions, methods, and classes in the provided code. Ensure the docstrings follow the standardized format:
+        Function/Method Description: Describe the purpose and problem solved by the function/method.
+        Parameters: List each parameter, including the type (if inferred) and a short description of its role.
+        Returns: Describe the return value, including the type and its significance.
+        Example (Optional): Provide a simple usage example.
+        Notes (Optional): Mention any special considerations or edge cases.
+
+    Do not modify the code logic or flow.
+
+    Type Hinting: Apply type annotations to all relevant variables and function signatures, ensuring the following:
+        Functions and methods have annotated parameter types and return types (use None when there is no return).
+        Variables are annotated with their appropriate types (e.g., integer, string, List[int]).
+        If needed, import any required typing libraries (e.g., List, Dict, etc.).
+
+    Do not alter the behavior of the code.
+
+    Inline Comments: Add descriptive comments to the code, explaining the purpose of each line or block. Ensure:
+        Comments are appropriate for the language and follow the correct syntax.
+        The comments are clear, concise, and informative.
+        Comments do not modify the code or affect its logic.
+
+Do not explain your solution, only return the modified code with the changes applied as per the tasks above.
+
+Code: 

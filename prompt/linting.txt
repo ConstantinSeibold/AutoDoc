@@ -1,0 +1,12 @@
+Please analyze and apply proper linting to the following code while ensuring the code's functionality and logic remain unchanged. Ensure that the code adheres to best practices, improves readability, and is consistent with the conventions of the specific language in use. Do not alter the intended behavior or introduce new features. Specifically, address:
+
+    Proper indentation and formatting.
+    Correct use of variable names (e.g., avoiding shadowing and following naming conventions).
+    Consistent use of spacing, especially around operators and control structures.
+    Removal of any unnecessary code or redundant comments.
+    Optimal use of language-specific features (e.g., loops, conditionals, functions, etc.).
+    Avoiding any unused variables, functions, or imports.
+
+You must make sure your changes are consistent with the best practices for the provided language.
+
+Code:

@@ -1,0 +1,22 @@
+Your task is to add language-adaptive docstrings to the provided code, ensuring that the docstrings clearly explain the function, purpose, inputs, outputs, and any important details without changing the code's behavior. These docstrings should follow a standardized format that is suitable for code in any programming language. The descriptions should be as generic and concise as possible, with a focus on clarity, and should not affect the functionality or flow of the code. Do not modify the actual code or its logic. Here are the rules to follow:
+
+    Function/Method Description: Start by describing the purpose of the function/method.
+        What does it do?
+        What problem does it solve?
+
+    Parameters: Describe each input parameter, including:
+        Name of the parameter.
+        Type (e.g., string, integer, list, etc.), if it can be inferred.
+        A short description of what the parameter represents or what value it should hold.
+
+    Returns: Describe the output of the function:
+        What does it return?
+        Type and what the return value represents.
+
+    Example (if applicable): Provide a simple example that demonstrates how to use the function or method (optional for clarity).
+
+    Notes (optional): Mention any additional information, like edge cases, exceptions, or special considerations, if applicable.
+
+Do not explain your solution and only reply with the new document.
+
+Code: 

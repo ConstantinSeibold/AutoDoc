@@ -1,0 +1,25 @@
+Apply type annotations or hints to the given code, ensuring that no changes are made to the functionality or behavior of the code.
+The annotations should specify the types of variables, function parameters, and return types where applicable.
+Maintain the original logic and structure of the code.
+For example, if a function takes a specific type of input (like an integer or string), annotate it accordingly.
+If a variable holds a certain type of value (such as an integer or a string), annotate it with the appropriate type.
+Additionally, ensure that the return type of the function is annotated if applicable, specifying None when no value is returned.
+For example, if given:
+
+function a(b) {
+    d = 1;
+}
+
+The result should be:
+
+function a(b: integer) -> None {
+    d: integer = 1;
+}
+
+h: List[int] = [1,2,3]
+
+Apply the same type annotation principles to the code provided, using appropriate types for function arguments, return values, and variables.
+If it is necessary to import typing libraries to do so, then you are allowed to do so.
+
+
+Code:
