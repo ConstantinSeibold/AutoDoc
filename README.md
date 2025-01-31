@@ -1,4 +1,4 @@
-Automatic Documentation and Git Commit Tool
+## Local LLM-based Automatic Documentation and Git Commit Tool via Ollama
 
 ## Overview
 
