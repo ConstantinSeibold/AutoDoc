@@ -1,7 +1,9 @@
 from ollama import chat
 from ollama import ChatResponse
 from .extract_document import extract_text
+from utils.files import get_file_extension
 from tqdm import tqdm
+from typing import List
 import os
 
 
@@ -18,23 +20,6 @@ ignore_files = [
     ".json"
     ".md"
 ]
-
-def get_file_extension(filename: str) -> str:
-    """
-    Function/Method Description: The `get_file_extension` function takes a filename as input and returns its extension.
-    Parameters:
-        filename (str): The name of the file for which to extract the extension.
-    Returns:
-        str: The file extension.
-    Example:
-        >>> get_file_extension("example.txt")
-        ".txt"
-    Notes:
-        This function assumes that the filename always ends with a dot followed by the file extension, such as .txt, .json, etc.
-    """
-    base_name, extension = os.path.splitext(filename)
-    return extension
-
 
 def process_files(files: List[str], options: List[str], model_name: str):
     """
